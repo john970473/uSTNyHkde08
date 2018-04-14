@@ -11,7 +11,7 @@ var player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     // height: '390',
-    // width: '640',
+    width: '100%',
     videoId: 'uSTNyHkde08',
     events: {
       // 'onReady': onPlayerReady,
@@ -53,4 +53,7 @@ function play_context_one(index){
 }
 function pauseVideo() {
   player.pauseVideo();
+  for (var i=1 ; i<=10 ; i++){
+  document.getElementById('ts'+ i).style.backgroundColor = "white";
+}
 }
